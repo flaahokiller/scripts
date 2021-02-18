@@ -39,7 +39,8 @@ KERNEL_DIR=$PWD
 KERNEL="Moonlight"
 
 # Kernel zip name type
-TYPE="v1.0"
+export LOCALVERSION="Tsukuyomi-TEST"
+LOCALVERSION="Tsukuyomi-TEST"
 
 # The name of the device for which the kernel is built
 MODEL="Asus Zenfone Max Pro M2"
@@ -48,7 +49,7 @@ MODEL="Asus Zenfone Max Pro M2"
 DEVICE="X01BD"
 
 # Kernel revision
-KERNELTYPE=EAS
+KERNELTYPE=HMP
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
@@ -116,7 +117,7 @@ then
 	if [ -n "$DRONE" ]
 	then
 		export KBUILD_BUILD_VERSION="1"
-		export KBUILD_BUILD_HOST="DronceCI"
+		export KBUILD_BUILD_HOST="Otaku"
 		export CI_BRANCH=$DRONE_BRANCH
 	else
 		echo "Not presetting Build Version"
@@ -216,7 +217,7 @@ tg_post_build() {
 # Function to replace defconfig versioning
 setversioning() {
     # For staging branch
-    KERNELNAME="$KERNEL-$DEVICE-$KERNELTYPE-$TYPE-$DATE"
+    KERNELNAME="$KERNEL-$DEVICE-$LOCALVERSION-$DATE"
     # Export our new localversion and zipnames
     export KERNELTYPE KERNELNAME
     export ZIPNAME="$KERNELNAME.zip"
