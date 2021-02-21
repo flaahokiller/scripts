@@ -60,7 +60,7 @@ MANUFACTURERINFO="ASUSTek Computer Inc."
 
 # Specify compiler. 
 # 'clang' or 'gcc'
-COMPILER=clang
+COMPILER=gcc
 	if [ $COMPILER = "clang" ]
 	then
 		# install few necessary packages
@@ -148,8 +148,8 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 	elif [ $COMPILER = "gcc" ]
 	then
 		msg "|| Cloning GCC ||"
-		git clone https://github.com/najahiiii/aarch64-linux-gnu.git -b linaro8-20190402 --depth=1 gcc64
-		git clone https://github.com/innfinite4evr/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2.git -b master --depth=1 gcc32
+		git clone https://github.com/mvaisakh/gcc-arm64 -b gcc-master --depth=1 gcc64
+		git clone https://github.com/mvaisakh/gcc-arm -b gcc-master --depth=1 gcc32
 		GCC64_DIR=$KERNEL_DIR/gcc64
 		GCC32_DIR=$KERNEL_DIR/gcc32
 	fi
