@@ -103,7 +103,7 @@ LOG_DEBUG=0
 DISTRO=$(cat /etc/issue)
 CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 export CI_BRANCH
-export token="1504765920:AAHBp4wmP7iRKfHmVMMxYb9LSzXC8aFdFdI"
+export token="1589576060:AAHy12j9US6KcNUgUaInYTC_aP2XJI-vZps"
 
 ## Check for CI
 if [ -n "$CI" ]
