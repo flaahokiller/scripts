@@ -60,7 +60,7 @@ MANUFACTURERINFO="ASUSTek Computer Inc."
 
 # Specify compiler. 
 # 'clang' or 'gcc'
-COMPILER=clang
+COMPILER=gcc
 	if [ $COMPILER = "clang" ]
 	then
 		# install few necessary packages
