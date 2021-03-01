@@ -39,8 +39,8 @@ KERNEL_DIR=$PWD
 KERNEL="Moonlight"
 
 # Kernel zip name type
-export LOCALVERSION="Hikari-v1.1"
-LOCALVERSION="Hikari-v1.1"
+export LOCALVERSION="Takiyo-v1.1"
+LOCALVERSION="Takiyo-v1.1"
 
 # The name of the device for which the kernel is built
 MODEL="Asus Zenfone Max Pro M2"
@@ -60,7 +60,7 @@ MANUFACTURERINFO="ASUSTek Computer Inc."
 
 # Specify compiler. 
 # 'clang' or 'gcc'
-COMPILER=gcc
+COMPILER=clang
 	if [ $COMPILER = "clang" ]
 	then
 		# install few necessary packages
@@ -117,7 +117,7 @@ then
 	if [ -n "$DRONE" ]
 	then
 		export KBUILD_BUILD_VERSION="1"
-		export KBUILD_BUILD_HOST="Otaku"
+		export KBUILD_BUILD_HOST="otaku"
 		export CI_BRANCH=$DRONE_BRANCH
 	else
 		echo "Not presetting Build Version"
@@ -155,7 +155,7 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 	fi
 
 	msg "|| Cloning Anykernel ||"
-	git clone --depth 1 https://github.com/frostid/AnyKernel3.git -b X01BD
+	git clone --depth 1 https://github.com/frostid/AnyKernel3.git -b asus
 
 	if [ $BUILD_DTBO = 1 ]
 	then
@@ -167,7 +167,7 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 ##------------------------------------------------------##
 
 exports() {
-	export KBUILD_BUILD_USER="Frost"
+	export KBUILD_BUILD_USER="frost"
 	export ARCH=arm64
 	export SUBARCH=arm64
 
