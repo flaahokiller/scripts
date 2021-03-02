@@ -39,8 +39,8 @@ KERNEL_DIR=$PWD
 KERNEL="Moonlight"
 
 # Kernel zip name type
-export LOCALVERSION="Takiyo-v1.1"
-LOCALVERSION="Takiyo-v1.1"
+export LOCALVERSION="Yoshi-v1.1"
+LOCALVERSION="Yoshi-v1.1"
 
 # The name of the device for which the kernel is built
 MODEL="Asus Zenfone Max Pro M2"
