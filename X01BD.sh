@@ -155,7 +155,7 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 	fi
 
 	msg "|| Cloning Anykernel ||"
-	git clone --depth 1 https://github.com/frostid/AnyKernel3-asus AnyKernel3 -b master
+	git clone --depth 1 https://github.com/frostid/AnyKernel3-asus -b master AnyKernel3
 
 	if [ $BUILD_DTBO = 1 ]
 	then
