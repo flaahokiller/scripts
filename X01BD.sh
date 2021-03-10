@@ -39,8 +39,8 @@ KERNEL_DIR=$PWD
 KERNEL="Moonlight"
 
 # Kernel zip name type
-export LOCALVERSION="Yoshi-v1.1"
-LOCALVERSION="Yoshi-v1.1"
+export LOCALVERSION="Itsuki-v1.2"
+LOCALVERSION="Itsuki-v1.2"
 
 # The name of the device for which the kernel is built
 MODEL="Asus Zenfone Max Pro M2"
@@ -49,7 +49,7 @@ MODEL="Asus Zenfone Max Pro M2"
 DEVICE="X01BD"
 
 # Kernel revision
-KERNELTYPE=HMP
+KERNELTYPE=EAS
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
