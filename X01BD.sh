@@ -117,7 +117,7 @@ then
 	if [ -n "$DRONE" ]
 	then
 		export KBUILD_BUILD_VERSION="1"
-		export KBUILD_BUILD_HOST="otaku"
+		export KBUILD_BUILD_HOST="Server"
 		export CI_BRANCH=$DRONE_BRANCH
 	else
 		echo "Not presetting Build Version"
@@ -167,7 +167,7 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 ##------------------------------------------------------##
 
 exports() {
-	export KBUILD_BUILD_USER="frost"
+	export KBUILD_BUILD_USER="Six"
 	export ARCH=arm64
 	export SUBARCH=arm64
 
