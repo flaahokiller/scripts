@@ -36,11 +36,11 @@ err() {
 KERNEL_DIR=$PWD
 
 # The name of the Kernel, to name the ZIP
-KERNEL="Moonlight"
+KERNEL="Nightmare"
 
 # Kernel zip name type
-export LOCALVERSION="Itsuki-v1.2"
-LOCALVERSION="Itsuki-v1.2"
+export LOCALVERSION="-v1.0"
+LOCALVERSION="-v1.0"
 
 # The name of the device for which the kernel is built
 MODEL="Asus Zenfone Max Pro M2"
