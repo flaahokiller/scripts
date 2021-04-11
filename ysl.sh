@@ -53,15 +53,15 @@ KERNELTYPE=EAS
 
 # The defconfig which should be used. Get it from config.gz from
 # your device or check source
-DEFCONFIG=X01BD_defconfig
+DEFCONFIG=ysl-perf_defconfig
 
 # Show manufacturer info
-MANUFACTURERINFO="ASUSTek Computer Inc."
+MANUFACTURERINFO="Redmi s2"
 
 # Specify compiler. 
 # 'clang' or 'gcc'
-COMPILER=clang
-	if [ $COMPILER = "clang" ]
+COMPILER=gcc
+	if [ $COMPILER = "gcc" ]
 	then
 		# install few necessary packages
 		apt-get -y install llvm lld
@@ -75,7 +75,7 @@ PTTG=1
 	if [ $PTTG = 1 ]
 	then
 		# Set Telegram Chat ID
-		CHATID="-1001362420513"
+		CHATID="-1001351590996"
 	fi
 
 # Generate a full DEFCONFIG prior building. 1 is YES | 0 is NO(default)
@@ -103,7 +103,7 @@ LOG_DEBUG=0
 DISTRO=$(cat /etc/issue)
 CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 export CI_BRANCH
-export token="1589576060:AAHy12j9US6KcNUgUaInYTC_aP2XJI-vZps"
+export token="1452678314:AAHnlde74WlNYt5jU8DMn3Pp4_1OQH6gsok"
 
 ## Check for CI
 if [ -n "$CI" ]
@@ -132,7 +132,7 @@ KERVER=$(make kernelversion)
 COMMIT_HEAD=$(git log --oneline -1)
 
 # Set Date 
-DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
+DATE=$(TZ=Asia/kolkata date +"%Y%m%d-%T")
 
 #Now Its time for other stuffs like cloning, exporting, etc
 
@@ -148,8 +148,8 @@ DATE=$(TZ=Asia/Jakarta date +"%Y%m%d-%T")
 	elif [ $COMPILER = "gcc" ]
 	then
 		msg "|| Cloning GCC ||"
-		git clone https://github.com/najahiiii/aarch64-linux-gnu.git -b linaro8-20190402 --depth=1 gcc64
-		git clone https://github.com/innfinite4evr/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2.git -b master --depth=1 gcc32
+		git clone https://github.com/mvaisakh/gcc-arm64 --depth=1 gcc64
+		git clone https://github.com/mvaisakh/gcc-arm64 --depth=1 gcc32
 		GCC64_DIR=$KERNEL_DIR/gcc64
 		GCC32_DIR=$KERNEL_DIR/gcc32
 	fi
