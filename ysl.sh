@@ -36,17 +36,17 @@ err() {
 KERNEL_DIR=$PWD
 
 # The name of the Kernel, to name the ZIP
-KERNEL="Nightmare"
+KERNEL="flasho"
 
 # Kernel zip name type
 export LOCALVERSION="v1.0"
 LOCALVERSION="v1.0"
 
 # The name of the device for which the kernel is built
-MODEL="Asus Zenfone Max Pro M2"
+MODEL="Redmi s2"
 
 # The codename of the device
-DEVICE="X01BD"
+DEVICE="YSL"
 
 # Kernel revision
 KERNELTYPE=EAS
